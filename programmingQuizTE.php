@@ -11,7 +11,7 @@ Main page - contains menu and form
 	<body>
 		<nav>
 			<ul>
-				<?
+				<?php
 				$links = Navigation::get_links(false,0);
 				foreach($links as $link){
 					echo "<li><a href='".$link['url']."'>".$link['name']."</a>";
@@ -33,7 +33,7 @@ Main page - contains menu and form
 				Remove Navigation:
 				<br>
 				<select id="remove-id">
-					<?
+					<?php
 					$links = Navigation::get_links(true);
 					foreach($links as $link){
 						echo "<option value='".$link['id']."'>".$link['name']."</option>";
@@ -51,7 +51,7 @@ Main page - contains menu and form
 				<input type="text" name="name" id='add-url'>
 				<label for='add-parent'>Parent:</label>
 				<select id="add-parent-id">
-					<?
+					<?php
 					$links = Navigation::get_links(false,0);
 					foreach($links as $link){
 						echo "<option value='".$link['id']."'>".$link['name']."</option>";

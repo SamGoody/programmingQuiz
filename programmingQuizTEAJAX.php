@@ -1,4 +1,4 @@
-<?
+<?php
 
 /* ================
 used for AJAX calls to add/remove menu items

@@ -1,4 +1,4 @@
-<?
+<?php
 
 /*====================================
 A class used to access the db for navigation items
