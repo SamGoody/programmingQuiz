@@ -6,7 +6,7 @@ A class used to access the db for navigation items
 
 class Navigation
 {
-	public get_links($all=true,$parent){
+	public function get_links($all=true,$parent){
 	
 		$query = "SELECT
 					navigation.*,
@@ -22,7 +22,7 @@ class Navigation
 		return pg_query($query);
 	}
 	
-	public remove($remove_id){
+	public function remove($remove_id){
 	
 		//remove the link info
 		$query = "DELETE FROM
@@ -40,7 +40,7 @@ class Navigation
 		
 	}
     
-	public add($name,$parent_id,$url){
+	public function add($name,$parent_id,$url){
 		$query = "INSERT INTO navigation (name, parent)
 					VALUES('$1','$2')";
 		$return = pg_query_params($query,array($name,$parent_id));
