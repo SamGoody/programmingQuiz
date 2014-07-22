@@ -2,10 +2,13 @@
 Main page - contains menu and form
 ======================================= */
 
+<?php
+	include ('programmingQuizTENavigation.php');
+?>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" media="all" href="programmingQuizTE.css">
-		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script type="text/javascript" src="programmingQuizTE.js"></script>
 	</head>
 	<body>
