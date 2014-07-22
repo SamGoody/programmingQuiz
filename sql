@@ -2,8 +2,8 @@ CREATE TABLE navigation (
     id serial PRIMARY KEY,
 	name VARCHAR (255) NOT NULL,
 	parent integer NOT NULL,
-    table_constraint table_constraint
-) 
+    table_constraint text
+); 
 
 CREATE TABLE navigation_links (
     id integer PRIMARY KEY,
@@ -11,7 +11,7 @@ CREATE TABLE navigation_links (
 	CONSTRAINT navigation_links_fkey FOREIGN KEY (id)
       REFERENCES navigation (id) MATCH SIMPLE
       ON UPDATE NO ACTION ON DELETE NO ACTION
-)
+);
 
 INSERT INTO navigation (name, parent)
 VALUES
@@ -31,4 +31,4 @@ VALUES
 (1,'google.com'),
 (2,'example.com');
 
-[would need to insert a url for each menu id]
+-- [would need to insert a url for each menu id]
